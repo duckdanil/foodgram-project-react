@@ -45,7 +45,7 @@ class RecipeAdmin(admin.ModelAdmin):
         'favorite_count'
     )
     search_fields = ('name', 'author', 'tag',)
-    list_filter = ('name', 'author', 'tag',)
+    list_filter = ('name', 'author',)
     inlines = (IngredientInRecipeAdmin,)
     empty_value_display = '-пусто-'
 

@@ -10,7 +10,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
 
-def pdf_generate(text, response):
+def pdf_creating(text, response):
     reportlab.rl_config.TTFSearchPath.append(str(MEDIA_ROOT) + '/fonts')
     pdfmetrics.registerFont(TTFont('OpenSans', 'opensans.ttf'))
     styles = getSampleStyleSheet()

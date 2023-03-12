@@ -14,7 +14,7 @@ from users.models import User
 
 from .filters import IngredientFilter, RecipeFilter
 from .pagination import LimitPagination
-from .pdf_generate import pdf_creating
+from .pdf_creating import pdf_creating
 from .permissions import IsAdminOrAuthorOrReadOnly
 from .serializers import (IngredientSerializer, RecipeCreateSerializer,
                           RecipeReadSerializer, SubscribeSerializer,
