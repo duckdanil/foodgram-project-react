@@ -14,7 +14,7 @@ from users.models import User
 
 from .filters import IngredientFilter, RecipeFilter
 from .pagination import LimitPagination
-from .pdf_generate import pdf_generate
+from .pdf_generate import pdf_creating
 from .permissions import IsAdminOrAuthorOrReadOnly
 from .serializers import (IngredientSerializer, RecipeCreateSerializer,
                           RecipeReadSerializer, SubscribeSerializer,
@@ -155,4 +155,4 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 + str(value['amount__sum']) + ' '
                 + value['ingredient__measurement_unit'] + '<br/>'
             )
-        return pdf_generate(text_cart, response)
+        return pdf_creating(text_cart, response)
